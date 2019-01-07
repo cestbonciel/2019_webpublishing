@@ -18,9 +18,29 @@
             background-color:#ccc;
         }
     </style>
+		<script src="../js/jquery-3.3.1.min.js"></script>
 		<script>
+		/*$(document).ready(function(){
+			//alert("length = " + $("div").length);
+		});*/
+
+		$(document).ready(function(){
+			//$("ul.menu li").eq(1).css("border","4px solid #f00");
+			/*var $liList = $("ul.menu li");
+			var $li_1 = $liList.eq(1);
+			$li_1.css("border","4px solid #f00");*/
+
+			/*$("ul.menu li").get(1).style.border = "4px solid #f00";
+			$("ul.menu li")[0].style.border = "4px solid #f00";*/
 			
-		</script>	
+			$("ul.menu li").each(function(index){
+				//console.log("index = " + index);
+				//console.log($(this));
+				//$(this).css("border","4px solid #f00"); ↓ 아래 객체표현과 동일
+				$("ul.menu li").eq(index).css("border","4px solid #f00");
+			});
+		});
+		</script>
 	</head>
 	
 <body>

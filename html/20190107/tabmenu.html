@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>tabmenu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<style>
+		.container{width: 500px;margin: 50px auto;}
+		ul.tab:after{content:"";display: block;clear: both;}
+		ul.tab li{float: left;height: 40px;background-color: #e9eff8;width: 100px;-ms-border-radius: 10px 0 0 10px;border-radius: 10px 10px 0 0;}
+		ul.tab li a{display: block;line-height: 40px;text-align: center;}
+		ul.tab li.selected{background-color: #c1d2f2;}
+		.container div{border: 1px solid #9fb7d4;border-top: none;padding: 10px;}
+	</style>
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+				$("ul.tab li").eq(0).addClass("selected");
+				$(".container div").hide();
+				$(".container div").eq(0).show();
+				$("ul.tab li").click(function(){
+					$("ul.tab li").removeClass();
+					$(this).addClass("selected");
+					$(".container div").hide();
+					$(".container div").eq($(this).index()).show(); //this 그 선택된 대상의 인덱스 값
+					
+				});
+		});
+	</script>
+ </head>
+ <body>
+  <div class="container">
+		<ul class="tab">
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+		</ul>
+		<div>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, soluta, autem laborum nobis officia nostrum aspernatur a sed maxime beatae.
+		</div>
+		<div>2. Odio, aliquam nesciunt vel eos hic laboriosam iste officia maiores doloribus natus voluptate excepturi libero tempora! Deleniti, necessitatibus accusamus corporis!</div>
+		<div>3. Tempore, voluptates, voluptatum dolorum aspernatur explicabo totam vitae quas eius nostrum dolores ad hic maiores officiis unde at eveniet minima.</div>
+		<div>4. Beatae, ut, quod, nobis sequi consectetur nemo reiciendis commodi impedit distinctio doloremque ea minima ipsam hic nihil vero labore quasi!</div>
+		<div>5. Sit, ad, nihil, culpa enim officia facere quasi laboriosam quaerat placeat ducimus unde ipsum atque velit odio minima adipisci corporis.</div>
+	</div>
+ </body>
+</html>
