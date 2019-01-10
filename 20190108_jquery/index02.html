@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>setInterval</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		.tab-menu{height: 80px;}
+		.tab-menu li{float: left;width: 99px;height: 40px;text-indent:-1000px; cursor:pointer;}
+		.tab-menu li.menuitem1{background-image: url(images/newbtn.bar.1.png);}
+		.tab-menu li.menuitem2{background-image: url(images/newbtn.bar.2.png);}
+		.tab-menu li.menuitem3{background-image: url(images/newbtn.bar.3.png);}
+		.tab-menu li.menuitem4{background-image: url(images/newbtn.bar.4.png);}
+		.tab-menu li.menuitem5{background-image: url(images/newbtn.bar.5.png);}
+		.tab-menu li.menuitem6{background-image: url(images/newbtn.bar.6.png);}
+		.tab-menu li:hover{-ms-background-position-y: -40px;
+		background-position-y: -40px;}
+		.tab-menu li.select{-ms-background-position-y: -80px;
+		background-position-y: -80px;height: 80px;}
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+				var currentIndex = 0
+				var $menuitem = $("#tabMenu1 li");
+				//setInterval(function(){},1000);
+				
+				var timerId = setInterval(function(){
+					var $item = $menuitem.eq(currentIndex);
+					$item.addClass("select");
+					currentIndex++; //currentIndex = currentIndex + 1
+					
+					if (currentIndex >= $menuitem.length){
+						clearInterval(timerId);
+					}
+
+					console.log("currentIndex = " + currentIndex);
+
+				},1000);
+					
+		});
+	</script>
+ </head>
+ <body>
+		<ul class="tab-menu" id="tabMenu1">
+			<li class="menuitem1">google</li>
+			<li class="menuitem2">facebook</li>
+			<li class="menuitem3">pinterest</li>
+			<li class="menuitem4">twitter</li>
+			<li class="menuitem5">airbnb</li>
+			<li class="menuitem6">path</li>
+		</ul>
+ </body>
+</html>

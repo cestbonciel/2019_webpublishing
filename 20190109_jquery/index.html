@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Fish move</title>
+	<style>
+		#panel{width: 600px;height: 400px;border: 1px solid #999;position: relative;}
+		#fish{position: absolute;left: 250px;top:150px;}
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var panelWidth = parseInt($("#panel").css("width"));
+			var panelHeight = parseInt($("#panel").css("height"));
+			//console.log("panelWidth = " + panelWidth + " / panelHeight = " + panelHeight);
+			
+			var fishWidth = parseInt($("#fish").css("width"));
+			var fishHeight = parseInt($("#fish").css("height"));
+			//console.log("fishWidth = " + fishWidth + " / fishHeight = " + fishHeight);
+			
+			panelWidth = panelWidth - fishWidth;
+			panelHeight = panelHeight - fishHeight;
+
+			$("#btnStart").click(function(){
+					var left = parseInt(Math.random()*panelWidth);
+					var top = parseInt(Math.random()*panelHeight);
+					//console.log(left);
+					
+					/*$("#fish").stop().animate({
+						left:left,
+						top:top
+					});*/
+					$("#fish").css({
+						left:left,
+						top:top
+					});
+			});
+		
+		});
+	</script>
+ </head>
+ <body>
+  <button id="btnStart">
+		 클릭
+	</button>
+	<div id="panel">
+		<img src="images/fish1.png" alt="물고기" id="fish">
+	</div>
+ </body>
+</html>

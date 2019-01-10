@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style>
+            body {
+                font-size: 9pt;
+                font-family: "굴림";
+            }
+            div, p, ul, li {
+                border: 1px #eeeeee solid;
+                margin: 10px;
+            }
+            ul {
+                padding: 10px;
+            }
+            li.select {
+                background-color: #ccc;
+            }
+        </style>
+				<script src="../js/jquery-3.3.1.min.js"></script>
+				<script>
+					$(document).ready(function(){
+						//노드추가
+						/*var count = 0;
+						$("#btnAdd").click(function(){
+							count++; //count = count + 1;
+							//$("ul.menu").prepend("<li>new-menu " + count + "</li>");
+							$("ul.menu").append("<li>new-menu " + count + "</li>");
+						});
+
+						//$("body").prepend("<p>test</p>");*/
+							/*var count = 0;
+						$("#btnAdd").click(function(){
+								/*count++;
+								/*var $newItem = $("<li>new-menu" + count +"</li>")
+								$newItem.insertBefore("ul.menu li:eq(1)")//ul.menu li:eq(0)
+								$("ul.menu li").eq(0).before("<li>new-menu" + count +"</li>");
+								//$("ul.menu li:eq(0)").after("<li>new-menu" + count +"</li>");
+						});*/
+								//노드이동
+								/*var $menu = $("ul.menu");
+								$("ul.menu li").click(function(){
+									$menu.prepend(this);
+								});*/
+
+								/*$("ul.menu li").click(function(){
+									$(this).remove();
+								});*/
+
+								$("#show").click(function(){
+									$("ul.menu li").show();
+								});
+								$("#hide").click(function(){
+									$("ul.menu li").hide();
+								});
+					});
+				</script>
+    </head>
+
+    <body>
+				<button id="show">show</button>
+				<button id="hide">hide</button>
+        <!-- <button id="btnAdd">
+            추가
+        </button> -->
+        <ul class="menu">
+            <li>
+                menu1
+            </li>
+            <li>
+                menu2
+            </li>
+            <li class="select">
+                menu3
+            </li>
+            <li>
+                menu4
+            </li>
+            <li>
+                menu5
+            </li>
+            <li>
+                menu6
+            </li>
+        </ul>
+    </body>
+
+</html>

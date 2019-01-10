@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style>
+            body {
+                font-size: 9pt;
+                font-family: "굴림";
+            }
+            div, p, ul, li {
+                border: 1px #eeeeee solid;
+                margin: 10px;
+            }
+            ul {
+                padding: 10px;
+            }
+            li.select {
+                background-color: #ccc;
+            }
+        </style>
+				<script src="../js/jquery-3.3.1.min.js"></script>
+				<script>
+					$(document).ready(function(){
+						/*$("#ok").click(function(){
+							console.log($(".menu").text());
+						});*/
+						$("ul.menu li").click(function(){
+								$(this).html("<a href='http://www.naver.com'>새메뉴</a>");
+								//$(this).text("<a href='http://www.naver.com'>새메뉴</a>");
+						});
+
+					});
+				</script>
+    </head>
+
+    <body>
+				<button id="ok">확인</button>
+
+        <!-- <button id="btnAdd">
+            추가
+        </button> -->
+        <ul class="menu">
+            <li>
+                menu1
+            </li>
+            <li>
+                menu2
+            </li>
+            <li class="select">
+                menu3
+            </li>
+            <li>
+                menu4
+            </li>
+            <li>
+                menu5
+            </li>
+            <li>
+                menu6
+            </li>
+        </ul>
+    </body>
+
+</html>

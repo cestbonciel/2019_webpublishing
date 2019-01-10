@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>layout</title>
+	<style>
+		img{width:100%;display: block;}
+		.container{}
+		.row{margin: 0 auto;padding:5px;}
+		/*.row.w1000{width: 1000px;}
+		.row:after{content:"";display: block;clear: both;}
+		.row div[class*="span"]{float: left;margin-left: 2%;}
+		.row div[class*="span"]:first-child{float: left;margin-left: 0;}
+		.span_6{width: 49%;}
+		.span_4{width: 32%;}
+		.span_3{width: 23.5%;}*/
+
+
+		@media screen and (min-width:769px) {
+		.row.w1000{width: 1000px;}
+		.row:after{content:"";display: block;clear: both;}
+		.row div[class*="span"]{float: left;margin-left: 2%;}
+		.row div[class*="span"]:first-child{float: left;margin-left: 0;}
+		.span_6{width: 49%;}
+		.span_4{width: 32%;}
+		.span_3{width: 23.5%;}
+		}
+		@media screen and (min-width:576px) and (max-width:768px){
+		.row.w1000{width: 95%;}
+		.row:after{content:"";display: block;clear: both;}
+		.row div[class*="span"]{float: left;margin-left: 2%;margin-bottom: 10px;}
+		.row div[class*="span"]:first-child,.row div[class*="span"]:nth-child(3){margin-left: 0;}
+		.span_6,.span_4,.span_3{width: 49%;}
+		.md_vnone{display: none;}
+		}
+		@media screen and (max-width: 575px) {
+			.row{padding: 10px;}
+			.row div{margin-bottom: 10px;}
+			.mo_vnone{display: none;}
+		}
+
+		/*card*/
+		.card{border: 1px solid #ddd;border-radius:10px;background: #fff;}
+		.card-img-top{border-radius:10px 10px 0 0;}
+		.card-body{padding: 20px;}
+		.card-body .card-title{font-size: 18px;margin-bottom: 10px;}
+		.card-body .card-text{font-size: 14px;margin-bottom: 10px;}
+
+		/*button*/
+		.btn{padding: 5px 10px;text-align: center;-ms-border-radius: 5px;border-radius: 5px;transition:.3s;}
+		.btn a{color:white;display: block;line-height: 30px;}
+		.btn a:hover{}
+		/*button color*/
+		.btn.blue:hover{background: blue;}
+		.btn.pink:hover{background: orange;}
+		.btn.violet:hover{background: orange;}
+		.btn.blue{background: #007bff;}
+		.btn.pink{background: red;}
+		.btn.violet{background: violet;}
+
+		.container.bg-gray{background: gray;}
+		.container.bg-skyblue{background: skyblue;}
+	</style>
+ </head>
+ <body>
+	<div class="container bg-gray">
+		<div class="row w1000">
+			<div class="span_6">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn blue"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_6 mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn pink"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row w1000">
+			<div class="span_4">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn blue"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_4 mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn blue"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_4 md_vnone mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn blue"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container bg-skyblue">
+		<div class="row w1000">
+			<div class="span_3">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn violet"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_3 mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn violet"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_3 mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn violet"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="span_3 mo_vnone">
+				<div class="card">
+					<img src="images/testimg.jpg" alt="card image" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">한성용</h4>
+						<p class="card-text">대표</p>
+						<div class="btn violet"><a href="tel:01063122268">010-6312-2268</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+ </body>
+</html>

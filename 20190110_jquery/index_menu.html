@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>menu</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+ <style>
+	#nav{width: 800px;margin: 100px auto;}
+	#nav ul:after{content:"";display: block;clear: both;}
+	#nav ul > li{float: left;}
+	#nav ul > li > a{display: block;width: 200px;line-height: 30px;background: #ccc;text-align: center;color: #000;}
+	/* #nav ul > li > a:hover{background: #3cf;} */
+	#nav ul > li.on > a{background: #3cf;color: #fff;}
+ </style>
+ <script>
+		$(document).ready(function(){
+				var urls = [
+						"http://www.naver.com",
+						"http://www.daum.net",
+						"http://www.google.com",
+						"http://www.fb.com"
+				];
+				$("#nav>ul>li").on({
+					mouseover:function(){
+						$(this).addClass("on");
+					},
+					mouseout:function(){
+						$(this).removeClass("on");
+					},
+					click:function(e){
+						e.preventDefault();
+						var linkURL = urls[$(this).index()];
+						location.href = linkURL;
+					}
+				});
+		});
+	</script>
+ </head>
+ <body>
+  <div id="nav">
+  	<ul>
+  		<li><a href="#">menu1</a></li>
+  		<li><a href="#">menu2</a></li>
+  		<li><a href="#">menu3</a></li>
+  		<li><a href="#">menu4</a></li>
+  	</ul>
+  </div>
+ </body>
+</html>

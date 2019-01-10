@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>style jquery</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		/*div{margin: 30px;padding: 30px;font-size: 24px;}*/
+		ul.menu{padding: 10px;border: 1px solid #000;}
+		ul.menu li{border: 1px solid #eee;margin: 10px;}
+		ul.menu li.select{background: #ccc;color: #f00;font-size: 20px;}
+		ul.menu li.border{border: 4px solid #f00;}
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			/*$("#test1").css({
+				border:"2px solid #f00",
+				"font-size":12,
+				"background":"#0f0"
+			});//"font-size","12px"//12 라고 사용가능*/
+			$("#btn").click(function(){
+				//$(".menu li").eq(1).toggleClass("select border");
+					alert($("ul").hasClass("menu"));
+			});
+		});
+		//window.onload = function (){
+		//document.getElementById("test1").style.font-size = "12px"
+		//};
+	</script>
+ </head>
+ <body>
+ 		<button id="btn">수정</button>
+		<ul class="menu">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+			<li>menu6</li>
+		</ul>
+ </body>
+</html>

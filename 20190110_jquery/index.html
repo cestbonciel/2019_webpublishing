@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>title</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#springBtn").click(function(){
+				/*$("#image > img").attr({
+					src:"../images/spring.jpg",
+					alt:"봄"*/
+					$("#image").removeClass().addClass("spring");
+			});
+			$("#summerBtn").click(function(){
+					$("#image").removeClass().addClass("summer");
+			
+			});
+			$("#fallBtn").click(function(){
+				$("#image").removeClass().addClass("fall");
+			});
+			$("#winterBtn").click(function(){
+				$("#image").removeClass().addClass("winter");
+			});
+		});
+	</script>
+	<style>
+		#wrapper{width: 522px;margin: 0 auto;}
+		ul:after{content:"";display: block;clear: both;}
+		ul > li{float: left;width: 123px;height: 40px;margin-left: 10px;}
+		ul > li:first-child{margin-left: 0;}
+		ul > li > a{display: block;width: 123px;}
+		#image{width: 522px;height: 400px;}
+		#image.spring{background:url(../images/spring.jpg);}
+		#image.summer{background:url(../images/summer.jpg);}
+		#image.fall{background:url(../images/fall.jpg);}
+		#image.winter{background:url(../images/winter.jpg);}
+	
+	</style>
+ </head>
+ <body>
+  <div id="wrapper">
+		<div id="nav">
+			<ul>
+				<li id="springBtn"><a href="#"><img src="../images/btn1_2.jpg" alt="버튼이미지1"></a></li>
+				<li id="summerBtn"><a href="#"><img src="../images/btn2_2.jpg" alt="버튼이미지2"></a></li>
+				<li id="fallBtn"><a href="#"><img src="../images/btn3_2.jpg" alt="버튼이미지3"></a></li>
+				<li id="winterBtn"><a href="#"><img src="../images/btn4_2.jpg" alt="버튼이미지4"></a></li>
+			</ul>
+		</div>
+		<div id="image" class="spring">
+			
+		</div>
+	</div>
+ </body>
+</html>
