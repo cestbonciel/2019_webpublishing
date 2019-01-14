@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="../css/reset.css">
+  <title>Document</title>
+	<style>
+		.wrap{width: 950px;margin: 0 auto;}
+		#top_menu{position: fixed;width: 950px;height: 114px;text-align: center;top: 0;background: #545454;}
+		#top_menu:after{content:"";display: block;clear: both;}
+		#top_menu ul{float: right;margin-right: 33px;}
+		#top_menu ul li{float: left;color: #ccc;}
+		#top_menu ul li a{display: block;color: #fff;padding: 59px 0 0 63px;}
+		#top_menu ul li.on a{color:yellow;font-weight: bold;}
+		#logo{float: left;}
+		#contents{margin-top: 114px;}
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+				var menu = $("#top_menu > ul > li");
+				var contents = $("#contents > div");
+				menu.click(function(e){
+					e.preventDefault();
+					
+					var tg = $(this);
+					var i = tg.index();
+					
+					var section = contents.eq(i); //($(this=menu).index()); = eq(i)
+					console.log(section);
+
+					var tt = section.offset().top - 114;
+					$("html,body").stop().animate({scrollTop:tt});
+				});
+				$(window).scroll(function(){
+						var sct = window.pageYOffset;
+
+						contents.each(function(index){
+								if (sct >= $(this).offset().top - 114){
+									menu.removeClass("on");
+									menu.eq(index).addClass("on");
+								}
+						});
+						
+						/*var paper = contents.eq(0).offset().top - 114;
+						
+						if (sct >= paper){
+								menu.removeClass("on");
+								menu.eq(0).addClass("on");
+						}
+
+						var company = contents.eq(1).offset().top - 114;
+						
+						if (sct >= company){
+								menu.removeClass("on");
+								menu.eq(1).addClass("on");
+						}
+
+						var email = contents.eq(2).offset().top - 114;
+						
+						if (sct >= email){
+								menu.removeClass("on");
+								menu.eq(2).addClass("on");
+						}*/
+				});
+		});
+	</script>
+ </head>
+ <body>
+  <div class="wrap">
+		<div id="top_menu">
+			<div id="logo">
+				<a href="#home">
+					logo
+				</a>
+			</div>
+			<ul>
+				<li class="on"><a href="#works">menu1</a></li>
+				<li><a href="#company">menu2</a></li>
+				<li><a href="#email">menu3</a></li>
+			</ul>
+		</div>
+		<div id="contents">
+			<div id="works"><img src="../images/paper.jpg" alt="paper"></div>
+			<div id="company"><img src="../images/work.jpg" alt="work"></div>
+			<div id="email"><img src="../images/email.jpg" alt="email"></div>
+		</div>
+		<div style="height:150px;"></div> 
+	</div>
+ </body>
+</html>

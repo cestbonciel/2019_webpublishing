@@ -1,0 +1,18 @@
+/*
+1.스크롤 이벤트를 사용
+$("window").on("scroll",function(){
+	
+});
+2.스크롤 위치좌표를 구하기
+var scrollY = window.pageYOffset;
+3.메뉴의 위치좌표를 구하기
+
+var $menuPos = $(".menu-container").offset().top;
+4.스크롤위치와 메뉴위치를 비교
+if (scrollY > $ menuPos)
+
+5.메뉴에 클래스값 fixed 사용해,position:fixed 값을 넣고 
+addClass()/removeClass()로 불러들이고 제거하고.
+$("menu-container ul").addClass("fixed");
+$("menu-container ul").removeClass("fixed");
+*/
