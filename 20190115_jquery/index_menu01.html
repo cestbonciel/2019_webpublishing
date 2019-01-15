@@ -10,61 +10,35 @@
 	<title>menu</title>
  </head>
 	<style>
-		#menu{width: 900px;margin: 0 auto;}
+		#menu{width: 1000px;margin: 0 auto;position: relative;}
 		#menu > ul{width: 100%;height: 40px;}
 		#menu > ul:after{content:"";display: block;clear: both;}
-		#menu > ul > li{float: left;width: 20%;border-right: 1px solid #dfdfdf;position: relative;}
+		#menu > ul > li{float: left;width: 20%;border-right: 1px solid #dfdfdf;}
 		#menu > ul > li:last-child{border-right: none;}
 		
 		#menu > ul > li:hover{background-color: #eee;border-right: none;} 
 
 		#menu > ul > li > a{display: block;line-height: 40px;text-align: center;}
-		#menu > ul > li:hover ul.sub{background: #eee;} */
+		#menu > ul > li:hover ul.sub{background: #eee;}
 		
 		/* ul.sub{_position: absolute;_display: none;opacity: 0;} */
-		ul.sub{position: absolute;width: 100%;}
-		ul.sub > li{width: 100%;background-color: #fff;}
-		ul.sub > li > a{display: block;text-align: center;padding: 5px 0;}
+		ul.sub{position:absolute;width: 100%;left: 0;}
+		ul.sub:after{content:"";display: block;clear: both;}
+		ul.sub > li{float: left;background-color: #eee;}
+		ul.sub > li > a{display: block;text-align: center;padding: 5px 10px;}
 
 		.container{width: 100%;height: 300px;background: #f00;}
 	</style>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			//css
-			/*$("ul.sub").css("display","none");
-			$("#menu>ul>li").mouseover(function(){
-					var i = $(this).index();
-					$("#menu>ul>li:eq(" + i + ") ul").css("display","block");
-					//$("#menu>ul>li>ul").eq(i).css("display","block");
-			}).mouseout(function(){
-					$("ul.sub").css("display","none");
-			});*/
-			//show()/hide()
-				/*$("ul.sub").hide();
-				$("#menu>ul>li").mouseenter(function(){
-					var i = $(this).index();
-					$("#menu>ul>li>ul").eq(i).stop().show(300);
-				}).mouseleave(function(){
-					$("ul.sub").stop().hide(300);
-				});*/
-				//slidedown()/slideup()
-				/*$("ul.sub").hide();
+				$("ul.sub").hide();
 				$("#menu>ul>li").mouseenter(function(){
 					var i = $(this).index();
 					$("#menu>ul>li>ul").eq(i).stop().slideDown();
 				}).mouseleave(function(){
 					$("ul.sub").stop().slideUp();
-				});*/
-				//hover
-				//hover 전체보기
-				/*$("ul.sub").hide();
-				$("#menu>ul").hover(function(){
-						var i = $(this).index();
-						$("ul.sub").slideDown();
-				},function(){
-						$("ul.sub").slideUp();
-				});*/
+				});
 
 		});
 	</script>
@@ -84,7 +58,7 @@
 				</li>
 				<li>
 					<a href="#">menu2</a>
-					<ul class="sub">
+					<ul class="sub" style="padding-left: 50px;">
 						<li><a href="#">smenu1</a></li>
 						<li><a href="#">smenu2</a></li>
 						<li><a href="#">smenu3</a></li>
@@ -94,7 +68,7 @@
 				</li>
 				<li>
 					<a href="#">menu3</a>
-					<ul class="sub">
+					<ul class="sub" style="padding-left: 150px;">
 						<li><a href="#">smenu1</a></li>
 						<li><a href="#">smenu2</a></li>
 						<li><a href="#">smenu3</a></li>
@@ -104,7 +78,7 @@
 				</li>
 				<li>
 					<a href="#">menu4</a>
-					<ul class="sub">
+					<ul class="sub"  style="padding-left: 350px;">
 						<li><a href="#">smenu1</a></li>
 						<li><a href="#">smenu2</a></li>
 						<li><a href="#">smenu3</a></li>
@@ -114,7 +88,7 @@
 				</li>
 				<li>
 					<a href="#">menu5</a>
-					<ul class="sub">
+					<ul class="sub" style="padding-left: 500px;">
 						<li><a href="#">smenu1</a></li>
 						<li><a href="#">smenu2</a></li>
 						<li><a href="#">smenu3</a></li>
