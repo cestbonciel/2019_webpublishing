@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+	<link rel="stylesheet" href="../css/reset.css">
+ </head>
+ <style>
+	#gallery{width: 824px;height: 595px;margin: 30px auto;}
+	#image{width: 760px;height: 470px;margin: 0 auto;}
+	#image p{display: none;}
+	#image p img{width: 760px;height: 470px;}
+
+	#thumbnail{width: 824px;height: 95px;margin-top: 30px;}
+	#thumbnail:after{content:"";display: block;clear: both;}
+	#thumbnail div{float: left;}
+
+	#thumbnail .container{width: 760px;height: 95px;overflow: hidden;position: relative;left: 20px;}
+	#thumbnail .container ul{width: 2304px;position: absolute;background-color: #f00;margin-left: -8px;}
+	#thumbnail .container ul li.thumb{float: left;width: 120px;height: 95px;margin-left: 8px;text-align: center;cursor:pointer;}
+
+	#thumbnail .left{padding-top: 30px;cursor:pointer;}
+	#thumbnail .right{float: right;padding-top: 30px;cursor:pointer;}
+
+	#thumbnail .container ul li:nth-child(7),#thumbnail .container ul li:nth-child(13){margin-left: 0;}
+ </style>
+ <script src="../js/jquery-3.3.1.min.js"></script>
+ <script>
+	$(document).ready(function(){
+		var current = 0;
+		var $thumbnail = $("#thumbnail");
+		var $container = $thumbnail.find(".container > ul");
+		var $thumb = $container.find(".thumb");
+		var $image = $("#gallery #image > p");
+
+		var $prev = $thumbnail.find(".left");
+		var $next = $thumbnail.find(".right");
+
+		var $containerWidth = $thumbnail.find(".container").width();
+			$next.on("click",function(){
+				if(current < 2) {
+					current++;
+				} else {
+					current = 0;
+				}
+				console.log(current);
+				listMove();
+			});
+	
+			$prev.on("click",function(){
+				if(current > 0) {
+					current--;
+				} else {
+					current = 2;
+				}
+				console.log(current);
+				listMove();
+			});
+			
+			function listMove() {
+				var tl = $containerWidth * current * -1
+				$container.stop().animate({left:tl});
+			};
+
+			$thumb.on("click",function(){
+				$image.css("display","none");
+				var i = $(this).index();
+				$image.eq(i).css("display","block");
+			});
+	});
+ </script>
+ <body>
+  <div id="gallery">
+  	<div id="image">
+			<p style="display:block;"><img src="../images/0.jpg" alt="img0"></p>
+			<p><img src="../images/1.jpg" alt="img1"></p>
+			<p><img src="../images/2.jpg" alt="img2"></p>
+			<p><img src="../images/3.jpg" alt="img3"></p>
+			<p><img src="../images/4.jpg" alt="img4"></p>
+			<p><img src="../images/5.jpg" alt="img5"></p>
+			<p><img src="../images/6.jpg" alt="img6"></p>
+			<p><img src="../images/7.jpg" alt="img7"></p>
+			<p><img src="../images/8.jpg" alt="img8"></p>
+			<p><img src="../images/9.jpg" alt="img9"></p>
+			<p><img src="../images/10.jpg" alt="img10"></p>
+			<p><img src="../images/11.jpg" alt="img11"></p>
+			<p><img src="../images/12.jpg" alt="img12"></p>
+			<p><img src="../images/13.jpg" alt="img13"></p>
+			<p><img src="../images/14.jpg" alt="img14"></p>
+			<p><img src="../images/15.jpg" alt="img15"></p>
+			<p><img src="../images/16.jpg" alt="img16"></p>
+			<p><img src="../images/17.jpg" alt="img17"></p>
+		</div>
+  	<div id="thumbnail">
+			<div class="left">
+				<img src="../images/btn_left.gif" alt="이전">
+			</div>
+			<div class="container">
+				<ul>
+					<li class="thumb"><img src="../images/thumb0.jpg" alt="thumb0">0</li>
+					<li class="thumb"><img src="../images/thumb1.jpg" alt="thumb1">1</li>
+					<li class="thumb"><img src="../images/thumb2.jpg" alt="thumb2">2</li>
+					<li class="thumb"><img src="../images/thumb3.jpg" alt="thumb3">3</li>
+					<li class="thumb"><img src="../images/thumb4.jpg" alt="thumb4">4</li>
+					<li class="thumb"><img src="../images/thumb5.jpg" alt="thumb5">5</li>
+					<li class="thumb"><img src="../images/thumb6.jpg" alt="thumb6">6</li>
+					<li class="thumb"><img src="../images/thumb7.jpg" alt="thumb7">7</li>
+					<li class="thumb"><img src="../images/thumb8.jpg" alt="thumb8">8</li>
+					<li class="thumb"><img src="../images/thumb9.jpg" alt="thumb9">9</li>
+					<li class="thumb"><img src="../images/thumb10.jpg" alt="thumb10">10</li>
+					<li class="thumb"><img src="../images/thumb11.jpg" alt="thumb11">11</li>
+					<li class="thumb"><img src="../images/thumb12.jpg" alt="thumb12">12</li>
+					<li class="thumb"><img src="../images/thumb13.jpg" alt="thumb13">13</li>
+					<li class="thumb"><img src="../images/thumb14.jpg" alt="thumb14">14</li>
+					<li class="thumb"><img src="../images/thumb15.jpg" alt="thumb15">15</li>
+					<li class="thumb"><img src="../images/thumb16.jpg" alt="thumb16">16</li>
+					<li class="thumb"><img src="../images/thumb17.jpg" alt="thumb17">17</li>
+				</ul>
+			</div>
+			<div class="right">
+				<img src="../images/btn_right.gif" alt="다음">
+			</div>
+		</div>
+  </div>
+ </body>
+</html>
