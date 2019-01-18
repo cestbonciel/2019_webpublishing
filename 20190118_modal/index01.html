@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>Modal</title>
+	<style>
+		h1{width: 450px;padding: 10px;margin: 20px auto;font-weight: bold;font-size: 1.5em;}
+		ul:after{content:"";display: block;clear: both;}
+		ul{width: 450px;margin: 0 auto;}
+		ul>li{width: 150px;float: left;}
+
+		#grayLayer{position: fixed;width: 100%;height: 100%;top: 0;left: 0;background: #000;opacity:.6;display: none;}
+		#overLayer{position: fixed;top: 50%;left: 50%;margin-left: -215px;margin-top: -142px;display: none;}
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			
+			$("body").append("<div id='grayLayer'></div><div id='overLayer'></div>");
+			$("ul>li>a.modal").click(function(e){
+				e.preventDefault();
+				$("#grayLayer").show();
+				$("#overLayer").show();
+				$("#overLayer").html("<img src='" + $(this).attr("href") +"'>");
+
+			});
+			$("#grayLayer","#overLayer").click(function(){
+				$("#grayLayer").hide();
+				$("#overLayer").hide();
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<h1>Jquery를 이용한 Modal</h1>
+	<ul>
+		<li><a href="images/mphoto01_01.jpg" class="modal"><img src="images/mphoto01.jpg" alt="img01"></a></li>
+		<li><a href="images/mphoto02_01.jpg" class="modal"><img src="images/mphoto02.jpg" alt="img02"></a></li>
+		<li><a href="images/mphoto03_01.jpg" class="modal"><img src="images/mphoto03.jpg" alt="img03"></a></li>
+		<li><a href="images/mphoto04_01.jpg" class="modal"><img src="images/mphoto04.jpg" alt="img04"></a></li>
+		<li><a href="images/mphoto05_01.jpg" class="modal"><img src="images/mphoto05.jpg" alt="img05"></a></li>
+		<li><a href="images/mphoto06_01.jpg" class="modal"><img src="images/mphoto06.jpg" alt="img06"></a></li>
+	</ul>
+</body>
+</html>

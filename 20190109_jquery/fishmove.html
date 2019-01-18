@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+</head>
+<link rel="stylesheet" href="../css/reset.css">
+<style>
+	#panel{position: relative;width: 600px;height: 400px;margin: 30px auto;border: 1px solid #00f;}
+	#btnStart{top:500px;left: 50%;width: 50px;height: 30px;margin: 0 auto;}
+	#fish{position: absolute;left: 250px;top: 150px;}
+</style>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+	$(document).ready(function(){
+		var panelWidth = parseInt($("#panel").css("width"));
+		var panelHeight = parseInt($("#panel").css("height"));
+
+		var fishWidth = parseInt($("#fish").css("width"));
+		var fishHeight = parseInt($("#fish").css("height"));
+		panelWidth = panelWidth - fishWidth;
+		panelHeight = panelHeight - fishHeight;
+
+		$("#btnStart").click(function(){
+			var left = parseInt(Math.random()*panelWidth);
+			var top = parseInt(Math.random()*panelHeight);
+		
+			$("#fish").stop().animate({
+				left:left,
+				top:top
+			});
+		});
+	});
+</script>
+<body>
+	<button id="btnStart">Click!!</button>
+	<div id="panel"><img src="images/fish1.png" alt="물고기" id="fish"></div>
+</body>
+</html>

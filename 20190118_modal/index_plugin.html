@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+		<link rel="stylesheet" href="css/colorbox.css">
+	<title>Modal</title>
+	<style>
+		h1{width: 450px;padding: 10px;margin: 20px auto;font-weight: bold;font-size: 1.5em;}
+		ul:after{content:"";display: block;clear: both;}
+		ul{width: 450px;margin: 0 auto;}
+		ul>li{width: 150px;float: left;}
+
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/jquery.colorbox-min.js"></script>
+	<script>
+		$(function(){
+			$(".modal").colorbox({rel:'modal'});
+			$(".modal1").colorbox({rel:'modal1'});
+			$(".youtube").colorbox({iframe:true,innerWidth:560,innerHeight:315});
+			$(".iframe").colorbox({iframe:true,innerWidth:600,innerHeight:400});
+		});
+
+	</script>
+</head>
+<body>
+	<h1>Jquery를 이용한 Modal</h1>
+	<ul>
+		<li><a href="images/mphoto01_01.jpg" class="modal"><img src="images/mphoto01.jpg" alt="img01"></a></li>
+		<li><a href="images/mphoto02_01.jpg" class="modal"><img src="images/mphoto02.jpg" alt="img02"></a></li>
+		<li><a href="images/mphoto03_01.jpg" class="modal"><img src="images/mphoto03.jpg" alt="img03"></a></li>
+		<li><a href="images/mphoto04_01.jpg" class="modal1"><img src="images/mphoto04.jpg" alt="img04"></a></li>
+		<li><a href="http://hanulzoo.dothome.co.kr/bbs/board.php?bo_table=testbbs" class="iframe"><img src="images/mphoto05.jpg" alt="img05"></a></li>
+		<li><a href="https://www.youtube.com/embed/AFfjTXflEPA" class="youtube"><img src="images/mphoto06.jpg" alt="img06"></a></li>
+	</ul>
+</body>
+</html>

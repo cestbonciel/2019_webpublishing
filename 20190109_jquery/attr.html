@@ -8,7 +8,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>attribute</title>
 	<style>
-		img{width: 300px;height: 300px;}
+		img{width: 300px;height: 300px;display: block;}
+		.opacity{width: 300px;height: 300px;}
+		.opacity.on{background: #f00;opacity:.5;}
 	</style>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script>
@@ -20,19 +22,27 @@
 			//console.log($(".header img").attr("src"));
 		});*/
 
-		$(document).ready(function(){
-				$(".header img").hover(function(){
-					$(this).attr("src","images/fish1.png");
-				},function(){
-					$(this).attr("src","images/testimg.jpg");
-				});
-		});
+		 $(document).ready(function(){
+		 		$(".opacity").hide();
+		 		$(".header img").hover(function(){
+		 			//$(this).attr("src","images/fish1.png");
+		 			//$(".opacity").css("background","#f00");
+		 			$(".opacity").show();
+		 			$(".opacity").addClass("on").css("background","#f00");
+		 		},function(){
+		 			//$(this).css("border","none");
+		 			$(this).attr("src","images/fish1.png");
+		 		});
+		 });
 	</script>
  </head>
  <body>
 		<button id="btn">button</button>
 		<div class="header">
-			<img src="images/testimg.jpg" alt="이미지" class="target" id="">
+			<div class="opacity">
+				<img src="images/fish1.png" alt="이미지" class="target" id="">
+			</div>
+			<img src="images/fish1.png" alt="이미지" class="target" id="">
 			<!-- <a href="http://www.naver.com" target="_blank" class="image"></a> -->
 		</div>
  </body>
