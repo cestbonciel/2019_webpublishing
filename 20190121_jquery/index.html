@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>menu</title>
+	<style>
+		body{background:url(images/windmill.jpg) no-repeat right bottom fixed;background-size:cover;}
+		nav{width: 100%;background-color:#000;_a:link,a:hover,a:visited:white !important;}
+		nav ul{display: none;}
+		nav ul li a{display: block;width: 100%;text-align: center;font-weight: bold;;line-height: 40px;color: #fff;}
+		nav a#trigger{display: block;line-height: 40px;width: 100%;position: relative;color: #fff;padding-left: 40px;}
+		nav a#trigger:after{content:"";position: absolute;width: 30px;height: 30px;background: url(images/nav.png) no-repeat;top: 10px;right: 15px;}
+
+		@media screen and (min-width: 721px) {
+			nav{height: 40px;}
+			nav ul{width: 720px;height: 40px;margin: 0 auto;display: block;}
+			nav ul li{float: left;width:120px;border-right: 1px solid #576979;}
+			nav ul li:last-child{border-right: 0;}
+			nav a#trigger{display: none;}
+		}
+
+	</style>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function(){
+			$("#trigger").click(function(e){
+				e.preventDefault;
+				$("nav ul").slideToggle();
+			});
+			$(window).resize(function(){
+				var winWidth = $(window).width();
+				if(winWidth > 500){
+					$("nav ul").removeAttr('style');
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- nav>(ul>li*6>a[#]>{menu$})+a#trigger[#]>{menu} -->
+	<nav>
+		<a href="#" id="trigger">menu</a>
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+			<li><a href="#">menu5</a></li>
+			<li><a href="#">menu6</a></li>
+		</ul>
+	</nav>
+</body>
+</html>

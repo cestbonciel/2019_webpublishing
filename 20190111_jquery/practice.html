@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>scroll event</title>
+</head>
+<style>
+	.wrap{_margin: 10px 0;}
+	.content{border: 1px dotted magenta;padding-left: 10px;margin:0 50px;}
+	div.menu_container{width: 100%;}
+	div.menu_container ul{width: 100%;}
+	div.menu_container ul:after{content:"";display: block;clear: both;}
+	div.menu_container ul>li{float: left;width: 20%;height:100px;text-align: center;background:darkblue;line-height: 100px;cursor:pointer;border-right: 1px solid yellow;color: #fff;transition:.3s;}
+	div.menu_container ul>li:last-child{border-right: none;}
+	div.menu_container.fixed{position: fixed;top: 0;left: 0;width: 100%;}
+	div.menu_container.fixed li{line-height: 50px;height: 50px;}
+	#btn{position: fixed;right: 20px;bottom: 50px;}
+	.content{position: relative;}
+	#img01{position: absolute;left: 20px;transition: .3s}
+	#img02{position: absolute;right: 20px;transition: .3s}
+</style>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+		var $menu = $(".menu_container");
+		var $menuPos = $menu.offset().top;
+
+		var $man1 = $("#img01");
+		var $manPos = $man1.offset().top;
+
+		var $man2 = $("#img02");
+		var $manPos2 = $man2.offset().top;
+
+		$man1.css({opacity:0});
+		$man2.css({opacity:0});
+
+		// console.log($manPos);
+
+		$(window).on("scroll",function(){
+			var scrollY = window.pageYOffset;
+			console.log(scrollY);
+			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed");}else{$(".menu_container").removeClass("fixed");}
+
+			if (scrollY > 1000) {$("#btn").fadeIn();}else{$("#btn").fadeOut();}
+
+			if(scrollY > $manPos - 600){$man1.css({left:300,opacity:1});}else{$man1.css({left:0,opacity:1});}
+
+			if(scrollY > $manPos2 - 600){$man2.css({right:500,opacity:1});}else{$man2.css({right:0,opacity:1});}
+		});
+		$("#btn").click(function(){
+			$("html,body").animate({scrollTop:0},300);
+		});
+	});
+</script>
+<body>
+	<div class="wrap">
+		<div class="menu_container">
+			<ul>
+				<li>menu1</li>
+				<li>menu2</li>
+				<li>menu3</li>
+				<li>menu4</li>
+				<li>menu5</li>
+			</ul>
+		</div>
+		<div class="content">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+			<p>12</p>
+			<p>13</p>
+			<p>14</p>
+			<p>15</p>
+			<p>16</p>
+			<p>17</p>
+			<p>18</p>
+			<p>19</p>
+			<p>20</p>
+			<p>21</p>
+			<p>22</p>
+			<p>23</p>
+			<p>24</p>
+			<p>25</p>
+			<p>26</p>
+			<p>27</p>
+			<p>28</p>
+			<p>29</p>
+			<p>30</p>
+			<p>31</p>
+			<p>32</p>
+			<p>33</p>
+			<p>34</p>
+			<p>35</p>
+			<p>36</p>
+			<p>37</p>
+			<p>38</p>
+			<p>39</p>
+			<p>40</p>
+			<p>41</p>
+			<p>42</p>
+			<p>43</p>
+			<p>44</p>
+			<p>45</p>
+			<p>46</p>
+			<p>47</p>
+			<p>48</p>
+			<p>49</p>
+			<p>50</p>
+		</div>
+		<div class="content">
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10
+				<img src="images/ginger01.gif" alt="img01" id="img01">
+			</p>
+			<p>11</p>
+			<p>12</p>
+			<p>13</p>
+			<p>14</p>
+			<p>15</p>
+			<p>16</p>
+			<p>17</p>
+			<p>18</p>
+			<p>19</p>
+			<p>20
+				<img src="images/ginger02.gif" alt="img02" id="img02">
+			</p>
+			<p>21</p>
+			<p>22</p>
+			<p>23</p>
+			<p>24</p>
+			<p>25</p>
+			<p>26</p>
+			<p>27</p>
+			<p>28</p>
+			<p>29</p>
+			<p>30</p>
+			<p>31</p>
+			<p>32</p>
+			<p>33</p>
+			<p>34</p>
+			<p>35</p>
+			<p>36</p>
+			<p>37</p>
+			<p>38</p>
+			<p>39</p>
+			<p>40</p>
+			<p>41</p>
+			<p>42</p>
+			<p>43</p>
+			<p>44</p>
+			<p>45</p>
+			<p>46</p>
+			<p>47</p>
+			<p>48</p>
+			<p>49</p>
+			<p>50</p>
+		</div>
+		<button id="btn">위로</button>
+	</div>
+</body>
+</html>
