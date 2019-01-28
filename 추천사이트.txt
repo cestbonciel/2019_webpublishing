@@ -1,0 +1,154 @@
+1. html 관련사이트
+http://www.w3schools.com
+
+2. 무료 이미지 공유 사이트
+http://www.sxc.hu
+http://www.public-domain-photos.com/
+http://www.textureking.com/
+http://www.cgtextures.com/
+http://www.changhoji.co.kr/
+https://pixabay.com/
+http://www.freeqration.com
+
+3.무료폰트사이트
+다폰트 http://www.dafont.com/
+폰트패브릭 http://fontfabric.com/
+무료 포토샵 기본 설정 파일 공유 http://www.photoshopfiles.com/
+
+4. 벤치마킹 사이트
+FWA http://www.thefwa.com/
+디비컷 http://www.dbcut.com/bbs/index.php
+웹어워드코리아 http://www.kipfa.or.kr/
+http://www.ideanote.co.kr/
+https://www.designrush.com/
+아이덴티티 에이전시 http://www.plus-ex.com
+
+5. 에디터
+http://www.sublimetext.com/
+https://atom.io/
+
+6. 캡쳐프로그램
+http://ngwin.com/kr
+http://color.adobe.com
+
+7.구글웹폰트
+https://fonts.google.com/
+https://fonts.google.com/earlyaccess
+https://type-scale.com
+
+8.github
+http://www.github.com
+https://desktop.github.com/
+
+9. 무료호스팅홈페이지
+http://www.dothome.co.kr
+
+10. 이미지스프라이트
+https://www.toptal.com/developers/css/sprite-generator
+
+11.슬라이드
+http://idangero.us/swiper/demos/#.WXmPODeQzct
+
+12.그리드
+http://1200px.com
+http://grid.guide/
+
+13.색상
+http://www.colorfavs.com/
+http://colorhunt.co/
+https://coolors.co
+https://color.adobe.com/ko/
+
+14.css
+https://tympanus.net/codrops/
+
+15.apm setup
+http://autoset.net
+
+16. css그레디언트
+http://www.colorzilla.com/gradient-editor/
+
+
+17. 프로토타입
+https://ovenapp.io/
+
+18. 운영체제 폰트다운
+머터리얼 디자인
+https://material.io/guidelines/resources/roboto-noto-fonts.html
+
+19. 가이드라인
+https://guideguide.me
+http://voidism.net/metallicratio/
+
+20. 일러스트
+http://www.urbanbrush.net/web/
+
+21. 워드프레스 추천사이트
+https://avada.theme-fusion.com/
+http://market.envato.com
+
+22. css/jquery 
+https://tympanus.net/
+plugin colorbox : http://www.jacklmoore.com/colorbox/
+아이콘 : https://fontawesome.com/
+
+23. 웹표준검사
+https://validator.w3.org/#validate_by_upload
+
+24. bootstrap
+https://hackerthemes.com/bootstrap-cheatsheet/
+https://startbootstrap.com/
+http://getbootstrap.com/docs/4.1/examples/
+https://pingendo.com/
+
+
+25.brush
+https://www.brusheezy.com
+
+26.ftp
+https://filezilla-project.org/
+
+27.sass tester
+https://www.sassmeister.com/
+
+28.sprite 생성도구
+http://spritepad.wearekiss.com/
+
+29. 목업
+https://freebiesbug.com/
+
+00.etc
+http://asplashofcolour.com/
+http://www.cocacola.co.kr/
+
+모바일 os디자인 개발사이트
+https://developer.apple.com/
+https://material.io/
+
+00.etc
+http://asplashofcolour.com/
+http://www.cocacola.co.kr/
+
+app developer
+https://developer.apple.com/
+https://material.io
+https://material.io/tools/icons/
+
+http://autoset.net/
+
+moodboard site
+https://niice.co/
+
+강좌사이트
+https://tacademy.skplanet.com/
+http://www.webdongne.com/
+https://www.inflearn.com/
+https://www.opentutorials.org/course/1
+https://www.edwith.org/
+https://www.codingfactory.net/
+
+
+/*사이트 디자인하는 곳 */
+http://www.i-award.or.kr/Web/
+www.themeforest.com
+

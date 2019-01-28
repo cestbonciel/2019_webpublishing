@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+</head>
+<style>
+	div{width: 340px;position: fixed;background: orange;height: 100%;left: -300px;}
+	div > a{position: absolute;right: 0;padding: 10px;display: block;}
+	div > ul{position: absolute;width: 300px;left: 0;}
+	div > ul > li{width: 100%;}
+	div > ul > li > a{display: block;width: 100%;text-align: center;padding: 10px 0;}
+</style>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+			var num = 0;
+			$("#btn").click(function(){
+			if (num == 0) {
+				$("#topNav").animate({left:0});
+				$("#btn > img").attr("src","../../images/x.jpg");
+				num = 1;
+			}else{
+				$("#topNav").animate({left:-300});
+				$("#btn > img").attr("src","../../images/nav.png");
+				num = 0;
+			}
+		});	
+	});
+</script>
+<body>
+	<div id="topNav">
+		<a href="#" id="btn"><img src="../../images/nav.png" alt=""></a>
+		<ul>
+			<li><a href="#">menu1</a></li>
+			<li><a href="#">menu2</a></li>
+			<li><a href="#">menu3</a></li>
+			<li><a href="#">menu4</a></li>
+		</ul>
+	</div>
+</body>
+</html>

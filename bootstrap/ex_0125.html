@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+  <title>Document</title>
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+ </head>
+  <style>
+		div{_height: 50px;text-align: center;}
+		.container{margin-top: 30px;}
+	</style>
+ <body>
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-6 bg-primary box">1</div>
+			<div class="col-sm-4 col-md-3 d-lg-none bg-success box">2</div>
+			<div class="col-sm-4 col-md-3 col-lg-6 bg-info box">3</div>
+			<div class="col-sm-4 d-sm-none col-md-3 d-md-block bg-danger box">4</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-md-3 col-lg-6 bg-primary box">1</div>
+				<div class="col-sm-4 col-md-3 d-lg-none bg-success box">2</div>
+				<div class="col-sm-4 col-md-3 col-lg-6 bg-info box">3</div>
+				<div class="col-sm-4 d-sm-none col-md-3 d-md-block bg-danger box">4</div>
+			</div>
+		</div>
+	<button type="button" class="btn btn-primary">
+    Messages <span class="badge badge-light">4</span>
+  </button>
+  <button type="button" class="btn btn-danger">
+    Notifications <span class="badge badge-light">7</span>
+  </button>
+
+	<button data-toggle="collapse" data-target="#test" class="btn btn-warning">MENU</button>
+	<a href="#test" class="btn btn-primary" data-toggle="collapse">MENU</a>
+	<div id="test" class="collapse">Lorem ipsum dolor sit amet, consectetur.</div>
+
+	<div class="container-fluid p-0">
+	<div id="demo1" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+		<ul class="carousel-indicators">
+			<li data-target="#demo1" data-slide-to="0" class="active"></li>
+			<li data-target="#demo1" data-slide-to="1"></li>
+			<li data-target="#demo1" data-slide-to="2"></li>
+		</ul>
+
+		<!-- The slideshow -->
+		<div class="carousel-inner" style="display: none;">
+			<div class="carousel-item active">
+				<img src="../images/bg-top.jpg" alt="Los Angeles">
+			</div>
+			<div class="carousel-item">
+				<img src="../images/bg-top.jpg" alt="Chicago">
+			</div>
+			<div class="carousel-item">
+				<img src="../images/bg-top.jpg" alt="New York">
+			</div>
+		</div>
+
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo1" data-slide="prev">
+			<span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo1" data-slide="next">
+			<span class="carousel-control-next-icon"></span>
+		</a>
+
+	</div>
+</div>
+<div style="height: 100px;"></div>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+          <span class="sr-only">Close</span>
+        </button>
+      
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	<a href="#myModal" class="btn btn-danger" data-toggle="modal">Sign up Now</a>
+ </body>
+</html>

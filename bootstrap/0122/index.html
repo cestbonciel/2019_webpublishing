@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<script src="../../js/jquery-3.3.1.min.js"></script>
+	<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+	<style>
+		.container{margin-bottom: 20px;}	
+	</style>
+</head>
+
+<body>
+	<div class="container-flud m-0 p-0">
+		<div id="demo" class="carousel slide" data-ride="carousel">
+			<ul class="carousel-indicators">
+				<li data-target="#demo" data-slide-to="0" class="active"></li>
+				<li data-target="#demo" data-slide-to="1"></li>
+				<li data-target="#demo" data-slide-to="2"></li>
+			</ul>
+			<style>
+				.carousel-item{position: relative;}
+				.carousel-item img{width: 100%;}
+				.carousel-item > h3{width: 500px;position: absolute;color: #fff;top: 50%;left: 50%;margin-left: -250px;}
+				.carousel-item{
+				animation-duration: 3s;
+				animation-delay: 2s;
+				animation-iteration-count: infinite;
+				}
+			</style>
+			<div class="carousel-inner">
+				<div class="carousel-item active animate fadeIn animated">
+					<img src="../../images/bg1.jpg" alt="img01">
+					<h3 class="animate fadeInUp animated">Lorem ipsum dolor sit amet.</h3>
+				</div>
+				<div class="carousel-item animate fadeIn animated">
+					<img src="../../images/bg2.jpg" alt="img02">
+				</div>
+				<div class="carousel-item animate fadeIn animated">
+					<img src="../../images/bg3.jpg" alt="img03">
+				</div>
+				<a href="#demo" class="carousel-control-prev" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a href="#demo" class="carousel-control-next" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	
+		<nav class="navbar bg-dark navbar-expand-sm navbar-dark sticky-top">
+			<a href="#" class="navbar-brand">Logo</a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#menuNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menuNavbar">
+				<ul class="navbar-nav text-center ml-auto">
+					<li class="nav-item">
+						<a href="#" class="nav-link">link1</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">link2</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">link3</a>
+						
+						<div class="dropdown-menu dropdown-menu-right">
+							<a href="#" class="dropdown-item">sublink1</a>
+							<a href="#" class="dropdown-item">sublink2</a>
+							<a href="#" class="dropdown-item">sublink3</a>
+						</div>
+		
+					</li>
+					<li class="nav-item dropdown">
+						<a href="#" class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">link4</a>
+						
+						<div class="dropdown-menu dropdown-menu-right">
+							<a href="#" class="dropdown-item">sublink1</a>
+							<a href="#" class="dropdown-item">sublink2</a>
+							<a href="#" class="dropdown-item">sublink3</a>
+						</div>
+		
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+	
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 bg-primary text-center">1</div>
+			<div class="col-md-4 bg-primary text-center">2</div>
+			<div class="col-md-4 bg-primary text-center">3</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="btn btn-primary">button</div>
+		<div class="btn btn-secondary">button</div>
+		<a href="#" class="btn btn-info">button</a>
+	</div>
+	<div class="container">
+		<div class="btn-group">
+			<div class="btn btn-outline-primary">button</div>
+			<button class="btn btn-outline-primary">button</button>
+			<a href="#" class="btn btn-outline-primary">button</a>
+		</div>
+	</div>
+	<div class="container">
+		<div class="btn-group">
+			<button class="btn btn-primary">apple</button>
+			<button class="btn btn-primary">samsung</button>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">sony</button>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item">submenu1</a>
+					<a href="#" class="dropdown-item">submenu2</a>
+					<a href="#" class="dropdown-item">submenu3</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a href="#menu1" class="nav-link active" data-toggle="tab">link</a>
+			</li>
+			<li class="nav-item">
+				<a href="#menu2" class="nav-link" data-toggle="tab">link01</a>
+			</li>
+			<li class="nav-item">
+				<a href="#menu3" class="nav-link" data-toggle="tab">link02</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="menu1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, ab.111</div>
+			<div class="tab-pane fade" id="menu2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, ab.222</div>
+			<div class="tab-pane fade" id="menu3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, ab.333</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card">
+			<!-- <div class="card-header">header</div> -->
+			<div class="card-body">
+				<h4 class="card-title">title</h4>
+				<p class="card-text">Lorem ipsum dolor sit.</p>
+				<a href="#" class="card-link btn btn-primary">card link</a>
+			</div>
+			<!-- <div class="card-footer">footer</div> -->
+		</div>
+	</div>
+	<!-- 0 - 0
+		 1 - 0.25rem (16px 1em)
+		 2 - 0.5rem - 8  
+		 3 - 1rem - 16
+		 4 - 1.5rem - 24
+		 5 - 3rem - 48
+	 -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 mb-2">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title">김하늘</h4>
+						<p class="card-text">Lorem ipsum dolor.</p>
+						<a href="#" class="btn btn-primary">more</a>
+					</div>
+					<img src="../../images/testimg.jpg" alt="test" class="card-img-bottom">
+				</div>
+			</div>
+			<div class="col-md-4 mb-2">
+				<div class="card">
+					<img src="../../images/testimg.jpg" alt="test" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">김하늘</h4>
+						<p class="card-text">Lorem ipsum dolor.</p>
+						<a href="#" class="btn btn-primary">more</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 mb-2">
+				<div class="card">
+					<img src="../../images/testimg.jpg" alt="test" class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">김하늘</h4>
+						<p class="card-text">Lorem ipsum dolor.</p>
+						<a href="#" class="btn btn-primary">more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<button data-toggle="collapse" data-target="#demo1" class="btn btn-primary">아코디언 메뉴</button>
+		<div id="demo1" class="collapse">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam incidunt molestiae nemo quidem quia tempora eaque qui rerum doloremque omnis.</div>
+	</div>
+	
+	<div class="container">
+		<div id="accordion">
+			<div class="card">
+				<div class="card-header"><a href="#collapseOne" class="card-link" data-toggle="collapse">Lorem ipsum</a></div>
+				<div id="collapseOne" class="collapse show" data-parent="#accordion">
+					<div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis officia aut ad suscipit obcaecati fuga recusandae fugiat quam, quisquam libero.</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header"><a href="#collapseTwo" class="card-link" data-toggle="collapse">Lorem ipsum</a></div>
+				<div id="collapseTwo" class="collapse" data-parent="#accordion">
+					<div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis officia aut ad suscipit obcaecati fuga recusandae fugiat quam, quisquam libero.</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header"><a href="#collapseThree" class="card-link" data-toggle="collapse">Lorem ipsum</a></div>
+				<div id="collapseThree" class="collapse" data-parent="#accordion">
+					<div class="card-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis officia aut ad suscipit obcaecati fuga recusandae fugiat quam, quisquam libero.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="accordion1">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<a href="#item1" data-toggle="collapse">Lorem ipsum.</a>
+					<div id="item1" class="collapse show" data-parent="#accordion1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquid explicabo, quasi ratione, consequatur mollitia harum similique voluptas ipsam quos.
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#item2" data-toggle="collapse">Lorem ipsum.</a>
+					<div id="item2" class="collapse" data-parent="#accordion1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquid explicabo, quasi ratione, consequatur mollitia harum similique voluptas ipsam quos.
+					</div>
+				</li>
+				<li class="list-group-item">
+					<a href="#item3" data-toggle="collapse">Lorem ipsum.</a>
+					<div id="item3" class="collapse" data-parent="#accordion1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aliquid explicabo, quasi ratione, consequatur mollitia harum similique voluptas ipsam quos.
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div style="height:1000px;"></div>
+</body>
+</html>

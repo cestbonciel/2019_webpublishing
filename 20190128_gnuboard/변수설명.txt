@@ -1,0 +1,15 @@
+<?if(defined('_INDEX_')) { // index에서만 실행?>
+	실행화면
+<?}?>
+
+처음 index경로
+<?php echo G5_URL ?>
+
+이미지경로
+<?echo G5_THEME_IMG_URL ?>
+
+CSS경로
+<?echo G5_THEME_CSS_URL ?>
+
+게시판모듈경로
+<?echo G5_BBS_URL ?>

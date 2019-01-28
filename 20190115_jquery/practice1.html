@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../css/reset.css">
+	<title>title</title>
+</head>
+<style>
+	#menu{width: 1000px;margin: 0 auto;position: relative;}
+	#menu ul ul li{_display: none;}
+	#menu > ul:after{content:"";display: block;clear: both;}
+	#menu > ul{width: 100%;height: 50px;}
+	#menu > ul > li{float: left;width: 20%;border-right: 1px solid #dfdfdf;}
+	#menu > ul > li > a{display: block;line-height: 50px;text-align: center;}
+	#menu > ul > li:last-child{border-right: none;}
+	#menu > ul > li:hover{background-color: #eee;border-right: none;}
+
+	#menu > ul > li:hover ul.sub{background: #eee;border-right: none;}
+
+	ul.sub{position: absolute;width: 100%;left: 0;}
+	ul.sub:after{content:"";display: block;clear: both;}
+	ul.sub > li{float: left;background-color: #eee;}
+	ul.sub > li > a{display: block;text-align: center;padding: 5px 10px;}
+
+	.container{width: 100%;height: 300px;background: #f00;}
+</style>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+		$("ul.sub").hide();
+		$("#menu>ul>li").mouseenter(function(){
+			var i = $(this).index();
+			$("#menu>ul>li>ul").eq(i).stop().slideDown();
+		}).mouseleave(function(){
+			$("ul.sub").stop().slideUp();
+		});
+	});
+</script>
+<body>
+	<nav id="menu">
+		<ul>
+			<li>
+				<a href="#">menu1</a>
+				<ul class="sub">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu2</a>
+				<ul class="sub" style="padding-left: 50px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu3</a>
+				<ul class="sub" style="padding-left: 150px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu4</a>
+				<ul class="sub" style="padding-left: 350px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">menu5</a>
+				<ul class="sub" style="padding-left: 500px;">
+					<li><a href="#">smenu1</a></li>
+					<li><a href="#">smenu2</a></li>
+					<li><a href="#">smenu3</a></li>
+					<li><a href="#">smenu4</a></li>
+					<li><a href="#">smenu5</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="container"></div>
+</body>
+</html>
