@@ -41,16 +41,10 @@
 			var scrollY = window.pageYOffset;
 			console.log(scrollY);
 			if (scrollY > $menuPos) {$(".menu_container").addClass("fixed");}else{$(".menu_container").removeClass("fixed");}
-
-			if (scrollY > 1000) {$("#btn").fadeIn();}else{$("#btn").fadeOut();}
-
-			if(scrollY > $manPos - 600){$man1.css({left:300,opacity:1});}else{$man1.css({left:0,opacity:1});}
-
-			if(scrollY > $manPos2 - 600){$man2.css({right:500,opacity:1});}else{$man2.css({right:0,opacity:1});}
 		});
-		$("#btn").click(function(){
-			$("html,body").animate({scrollTop:0},300);
-		});
+		// $("#btn").click(function(){
+		// 	$("html,body").animate({scrollTop:0},300);
+		// });
 	});
 </script>
 <body>
