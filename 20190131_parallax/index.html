@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>parallax</title>
+<link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+	.sky{
+		background: url(images/bg1.png) 50% 0;
+		width: 100%;
+		height: 500px;position: relative;
+	}
+	.sky article{
+		position:absolute;
+		top:150px;left: 40%;
+	}
+		
+</style>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script>
+	$(function(){
+		$('section[data-type="background"]').each(function(){
+			var bg = $(this);
+			$(window).scroll(function(){
+				var yPos = - ($(window).scrollTop() / bg.data('speed'));
+				console.log("scroll: " + $(window).scrollTop() + "/" + "bg: " + yPos);
+				var coords = "50%" + yPos + "px";
+				bg.css({backgroundPosition:coords});
+			});
+		});
+	});
+</script>
+<body>
+    <section class="sky" data-type="background" data-speed="0.5">
+    	<article><img src="images/balloon.png" alt=""></article>
+    </section>
+    	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias error tempora culpa sint, doloremque necessitatibus incidunt rerum sequi quod sit debitis, quis quaerat ut esse. Dolorum, hic mollitia. Necessitatibus optio illo voluptates! Alias doloremque animi corrupti consequuntur et deserunt earum cumque incidunt sint, esse numquam eaque, cupiditate consequatur? Enim consequuntur, id pariatur quaerat magni quod harum optio labore eaque illum praesentium ipsa voluptate hic, est doloremque. Facere consequatur, incidunt deserunt ullam dolorem enim excepturi, autem libero quidem, saepe, facilis. Cupiditate nobis est fuga tenetur, a quaerat. Deleniti quam fugiat nobis dolor provident consectetur ipsam, minima reprehenderit earum ipsum reiciendis culpa maiores, architecto quos. Id accusantium fuga a, error dolores modi, delectus laborum dolorem, ipsa numquam blanditiis? Nostrum, provident eum numquam quis id maxime fuga facilis illo commodi dolorum, exercitationem dolore saepe quia pariatur ratione non et, quod maiores a eaque nam voluptatibus odio beatae ipsam totam. Voluptatum fugiat alias soluta nam temporibus voluptatem voluptates perspiciatis ipsum nemo a vel similique explicabo eveniet totam veniam nobis tenetur recusandae nostrum iure dolorum, molestias fugit distinctio aliquam placeat! Labore atque quasi cumque doloribus velit repellendus laborum et sed, aliquid impedit illum architecto, aperiam voluptates accusantium alias nesciunt, ea. Voluptatibus soluta ratione illum excepturi praesentium, id corporis molestiae voluptas doloribus assumenda quaerat rem quo, architecto, sequi magni libero! Facilis et commodi perferendis, molestiae eaque doloremque. Suscipit architecto saepe dolorem commodi, ea, possimus tenetur, quas adipisci ducimus vitae itaque inventore atque. Dolore expedita, fuga, obcaecati perspiciatis, ipsam voluptatibus quidem tenetur culpa fugit ipsa necessitatibus minima explicabo veritatis magni quia? Reprehenderit assumenda, nisi voluptas consectetur quis sint, numquam culpa quas itaque, alias dolore soluta veritatis eveniet fugit ipsa! Voluptatum sequi nemo in quidem facere voluptates animi aliquam beatae modi unde. Veritatis perferendis nobis dolorem, possimus, esse excepturi minus! Itaque numquam animi, voluptatem minus nam officiis iusto maiores. Quos magni consequuntur velit neque vel voluptas maxime repudiandae eos necessitatibus nemo nesciunt quibusdam veniam, perspiciatis, veritatis quia ipsam sapiente sit sequi. Pariatur, commodi eos consectetur id excepturi optio quas tempora ipsum, laboriosam dolor. Dolores rem quasi in amet beatae quidem inventore saepe, itaque eius perferendis veniam dolorem ipsa assumenda. Necessitatibus et, similique voluptatum earum voluptatem obcaecati iste, non veritatis harum vitae quos sunt optio explicabo, quam eos reprehenderit tenetur eaque ipsum eius cupiditate doloribus. Tempore dignissimos officiis consequatur amet repudiandae maiores unde laudantium quod magni quae quasi, quidem incidunt culpa veritatis excepturi at molestias nulla perspiciatis dicta, explicabo iure ipsam alias. Atque expedita maxime, vero vitae voluptas deserunt similique cum, praesentium veritatis consequuntur ipsam nihil ad ducimus veniam culpa possimus tempore odio, fugiat illum. Ipsam cupiditate error non eum impedit, voluptatum. Blanditiis cupiditate, odio laboriosam aut similique vitae, distinctio adipisci aspernatur omnis modi iure tenetur sed porro alias dolorem. Aliquam ipsum quae asperiores harum vel pariatur, officiis ea. Veritatis ad quod, autem explicabo dicta accusamus optio reprehenderit suscipit placeat atque sapiente consectetur illum molestiae incidunt et quae aspernatur error distinctio fugiat modi possimus. Dolor est, velit nam vitae! Nihil optio necessitatibus doloribus libero quaerat quibusdam quae totam non.
+    <section class="sky" data-type="background" data-speed="-0.5">
+    	<article><img src="images/balloon.png" alt=""></article>
+    </section>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti facilis temporibus tenetur, eligendi vero nulla, nesciunt voluptatem quidem iusto ducimus a quaerat vitae architecto aliquam optio itaque necessitatibus quis hic eos deleniti ipsam velit quos. Necessitatibus error unde laborum perferendis itaque. Illo voluptatibus impedit reiciendis vero, eius quae ullam quam quo, maiores provident sequi nulla officia! Eius molestiae, maiores sint ipsam voluptatum consectetur recusandae, repellendus aliquam delectus facere officia, vitae voluptate obcaecati commodi esse quam velit illo sapiente amet, quod. Quia, repudiandae maxime. Vel cum, mollitia saepe numquam alias facilis, veniam impedit aspernatur ab modi dolorum eligendi facere unde incidunt.
+</body>
+</html>
