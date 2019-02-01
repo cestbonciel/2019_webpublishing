@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>parallax-scroll</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/animate.min.css">
+</head>
+<style>
+	.clearfix:after{content:"";display: block;clear: both;}
+	.scene{height: 100vh;_background-size:cover;_background-attachment:fixed;box-shadow: 0 0 50px yellow;}
+	.scene.one{background: url(../images/pc01.jpg) 50% 0;}
+	.scene.two{background: url(../images/pc02.jpg) 50% 0;}
+	.scene.three{background: url(../images/pc03.jpg) 50% 0;}
+	.scene header{max-width: 80%;color: #fff;position: relative;_left: 50%;top: 50%;transform:translate(-50%,-50%);text-align: center;font-size: 1.5rem;_transition:.8s;margin: 0 auto;opacity: 0;}
+}
+	.scene header h1:after{display: block;content:"";border-bottom: 1px solid #fff;width: 8rem;margin: 0 auto;margin-top: 1rem;}
+	.scene header h1{margin-bottom: 1rem;font-size: 2em;font-weight: bold;}
+
+	nav#navi{position: fixed;height: 50px;width: 100%;background-color: #000;z-index:100;}
+	nav#navi a{color:white;}
+	nav#navi h1{float: left;width: 150px;text-align: center;line-height: 50px;}
+	nav#navi ul.main-nav{float: left;}
+	nav#navi ul.main-nav li a.on{color: yellow;font-weight: bold;background-color:gray;}
+	nav#navi ul.main-nav>li{float: left;}
+	nav#navi ul.main-nav>li>a{display: block;line-height: 50px;padding:0 20px;}
+</style>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/jquery.parallax-scroll.js"></script>
+<script>
+	$(function(){
+		
+		$(".scene").parallaxScroll({
+			friction:0.3
+		});
+
+		setTimeout(function(){
+			$(window).resize()
+		},1);
+
+		$("section").eq(0).find("header").addClass("animated fadeInUp");
+
+		$(".scroll").click(function(e){
+			e.preventDefault();
+			//중요
+			$("html,body").animate({scrollTop:$(this.hash).offset().top},500);
+		});
+		$(window).scroll(function(){
+			var sct = window.pageYOffset;
+
+				$("section.scene").each(function(index){
+					if (sct >= $(this).offset().top){
+						$(".scroll").removeClass("on");
+						$(".scroll").eq(index).addClass("on");
+
+						$("section header").removeClass("animated fadeInUp");
+						$("section").eq(index).find("header").addClass("animated fadeInUp");
+					}
+				});
+				
+		});
+
+
+	});
+</script>
+<body>
+  <nav id="navi" class="clearfix">
+  	<h1><a href="#">company</a></h1>
+  	<ul class="main-nav clearfix">
+  		<li><a href="#MS1" class="scroll on">MENU1</a></li>
+  		<li><a href="#MS2" class="scroll">MENU2</a></li>
+  		<li><a href="#MS3" class="scroll">MENU3</a></li>
+  	</ul>
+  </nav>
+  <section id="MS1" class="scene one" data-width="1200" data-height="600">
+  	<header>
+  		<h1>Lorem ipsum dolor sit amet.</h1>
+  		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, earum.
+  	</header>
+  </section>
+  <section  id="MS2" class="scene two" data-width="1200" data-height="600">
+  	<header>
+  		<h1>Eveniet ipsa non, tempora. Saepe.</h1>Rem eveniet quidem laboriosam officia quo fugit asperiores neque, maiores.
+  	</header>
+  </section>
+  <section id="MS3" class="scene three" data-width="1200" data-height="600">
+  	<header>
+  		<h1>Incidunt architecto nam, odit alias.</h1>Sit pariatur, quasi consectetur consequuntur, excepturi alias. Accusamus, eum pariatur?
+  	</header>
+  </section>
+</body>
+</html>
