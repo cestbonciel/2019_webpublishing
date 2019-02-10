@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>animation</title>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <style>
+  .wrap{width: 1260px;margin: 0 auto;}
+  #header{background-color: #ccc;padding: 40px;}
+  .wrap #header h1{font-size: 1.6rem;font-weight: bold;color: #00f;text-align: center; animation-delay:.3s}
+  .wrap #header h2{font-size: 1rem;font-weight: bold;color: #00f;text-align: center; animation-delay:.5s}
+	/*img	*/
+	
+		/*   .wrap ul:after{content:"";clear: both;display: block;}
+	  .wrap ul{margin: 0 auto;}
+	  .wrap ul li{width:300px;height:300px;position: relative;float: left;padding: 0 5px;border: 1px solid #f00;text-align: center;overflow: hidden;}
+	  .wrap ul li:last-child{_padding-right: 0;}
+	  
+	  .wrap ul > li > img{width: 100%;position: absolute;left:50%;top:50%;transform:scale(1) translate(-50%,-50%);transition:all 0.8s ease;}
+	  
+	  div ul > li > img {_overflow:hidden;width:100%;_height:500px;transition:all 1s;}
+	  .wrap ul > li :hover > img {width: 110%;} */
+	
+	.wrap .img-wrap{margin: 20px auto;width: 300px;height: 300px;border: 1px solid #f00;overflow: hidden;}
+	.wrap .img-wrap img{width: 100%;transition:transform .5s; _transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);}
+	.wrap .img-wrap:hover img{width: 110%;transform:scale(1.2)}
+  </style> 
+  <script>
+	/*$(function{
+		var h1 = $("#header h1").offset().top;
+		var h2 = $("#header h2").offset().top;
+	});*/
+  </script>
+ </head>
+ <body>
+  <div class="wrap">
+	  <div id="header">
+		<h1 class="zoomIn animated">movement</h1>
+		<h2 class="w3-animate-bottom">sub-title</h2>
+	  </div>
+		<p class="img-wrap"><img src="images/testimg.jpg" alt=""></p>
+  </div>
+ </body>
+</html>
