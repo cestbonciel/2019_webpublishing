@@ -28,9 +28,15 @@
 	  div ul > li > img {_overflow:hidden;width:100%;_height:500px;transition:all 1s;}
 	  .wrap ul > li :hover > img {width: 110%;} */
 	
-	.wrap .img-wrap{margin: 20px auto;width: 300px;height: 300px;border: 1px solid #f00;overflow: hidden;}
-	.wrap .img-wrap img{width: 100%;transition:transform .5s; _transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);}
-	.wrap .img-wrap:hover img{width: 110%;transform:scale(1.2)}
+	.wrap .img-wrap{margin: 20px auto;width: 300px;height: 300px;border: 1px solid #f00;overflow: hidden;position: relative;}
+	.wrap .img-wrap img{width: 100%;transition:.5s; _transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);position: absolute;left: 50%;transform:translateX(-50%)}
+	.wrap .img-wrap:hover img{width: 110%;transform:translateX(-50%);left: 50%;}
+
+	.wrap ul{}
+	.wrap ul:after{content:"";display: block;clear: both;}
+	.wrap ul li{float: left;margin:0 5px;border: 1px solid #f00;width: 300px;height: 250px;overflow: hidden;position: relative;}
+	.wrap ul li img{width: 100%;transition:.5s;;position: absolute;left: 50%;transform:translateX(-50%)}
+	.wrap ul li:hover img{width: 110%;transform:translateX(-50%);left: 50%;}
   </style> 
   <script>
 	/*$(function{
@@ -46,6 +52,12 @@
 		<h2 class="w3-animate-bottom">sub-title</h2>
 	  </div>
 		<p class="img-wrap"><img src="images/testimg.jpg" alt=""></p>
+		<ul>
+			<li><img src="images/testimg.jpg" alt=""></li>
+			<li><img src="images/testimg.jpg" alt=""></li>
+			<li><img src="images/testimg.jpg" alt=""></li>
+			<li><img src="images/testimg.jpg" alt=""></li>
+		</ul>
   </div>
  </body>
 </html>
