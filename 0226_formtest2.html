@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+ </head>
+ <style>
+ .clearfix:after{content:"";display: block;clear: both;}
+ .inquiry{
+ 	font: 1em Malgun Gothic,"맑은고딕",Arial,sans-serif;
+    width: 600px;
+    height: 350px;
+	 margin:0 auto;
+    background:#555 center bottom no-repeat;
+    background-size: cover;}
+	 .inquiry .contactus .formarea .fl input[type="text"] {
+    
+   /*  height: 58px;
+    line-height: 58px;
+    outline: 0; */
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #b7b6b5;
+    font-size: 15px;
+}
+.inquiry h3{color: #fff;font-size: 24px;font-weight: bold;padding: 10px;}
+.mform-wrap{margin-left:200px;}
+.btn_send a{text-decoration: none;color: #000;}
+.btn_send a:hover{color: #c40f39;}
+.mform_tit.mform_ftit{padding-top: 20px;}
+.mform_tit{margin-bottom: 10px;}
+.mform_tit label{color: #fff;width: 61px;}
+ </style>
+ <body>
+	<div class="inquiry">
+  			<h3>Contact Us</h3>
+        <form name="request_frm" method="post" action="request_ok.php" enctype="multipart/form-data"><div class="contactus">
+				<div class="formarea">
+						<div class="mform-wrap">
+							<div id="mform_sct">
+								<label for="sel" id="country" style="font-size:16px;color:#fff;">문의내용</label>
+								<select id="sel" class="form1" name="form_value[]">
+									<option value="">-선택-</option>
+									<option value="제품문의">제품문의</option>
+									<option value="제안사항">제안사항</option>
+									<option value="기타문의">기타문의</option>
+								</select>
+							</div>
+							
+							<div class="mform_tit clearfix mform_ftit">
+								<label style="display: block;float:left"> 이름*</label>
+								<input type="text" id="form2" name="form_value[]">
+							</div>
+							<div class="mform_tit clearfix">
+								<label style="display: block;float:left">이메일*</label>
+								<input type="text" id="form3" name="form_value[]">
+							</div>
+							<div class="mform_tit clearfix">
+								<label style="display: block;float:left">연락처</label>
+								<input type="text" id="form4" name="form_value[]">
+							</div>
+							<div class="mform_tit clearfix">
+								<label style="display: block;float:left">제목*</label>
+								<input type="text" id="form5" name="form_value[]">
+							</div>
+							<div class="mform_tit clearfix">
+								<label style="display: block;float:left">내용</label>
+								<textarea id="form6" name="form_value[]"></textarea>
+							</div>
+						</div>
+				</div>
+				<div class="btn_send" style="text-align: center;">
+					<button><a href="javascript:request_chk();text-decoration:none;">SEND</a></button>
+				</div>
+		  </form>
+	</div>
+ </body>
+</html>

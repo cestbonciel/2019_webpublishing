@@ -1,0 +1,47 @@
+<div class="inquiry">
+	<div class="bgarea"></div>
+	
+	<form name="request_frm" method="post" action="request_ok.php" enctype="multipart/form-data">
+	<input type="hidden" name="w" value="a">
+	<div class="contactus">
+		<h4>CONTACT US</h4>
+		
+		<div class="formarea">
+			<div class="fl">
+				<div>
+					<div id="select_box">
+						<label for="sel" id="country">문의내용</label>
+						<select id="sel" class="form1" name="form_value[]">
+							<option value="">-선택-</option>
+							<option value="제품문의">제품문의</option>
+							<option value="제안사항">제안사항</option>
+							<option value="기타문의">기타문의</option>
+						</select>
+					</div>
+				</div>
+				<div class="ie9_tit">
+					<input type="text" id="form2" name="form_value[]"><label style="display: block;">*이름</label>
+				</div>
+				<div class="ie9_tit">
+					<input type="text" id="form3" name="form_value[]"><label>*이메일</label>
+				</div>
+				<div class="ie9_tit">
+					<input type="text" id="form4" name="form_value[]"><label>연락처</label>
+				</div>
+				<div class="ie9_tit">
+					<input type="text" id="form5" name="form_value[]"><label>*제목</label>
+				</div>
+				<div class="ie9_tit">
+					<textarea id="form6" name="form_value[]"></textarea><label>*내용</label>
+				</div>
+			</div>
+			<div class="fr">
+				
+			</div>	
+		</div>
+		<div class="btn_send">
+			<a href="javascript:request_chk();">SEND</a>
+		</div>
+	</div>	
+	</form>
+</div>

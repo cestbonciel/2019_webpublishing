@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <!-- meta:vp -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>title</title>
+  <link rel="stylesheet" href="../../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../css/animate.min.css">
+  <script src="../../js/jquery-3.3.1.min.js"></script>
+ <!--  <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script> -->
+  <script src="../../js/bootstrap.min.js"></script>
+  <style>
+    #accordion .card a>img{padding-right: 15px;}
+    .mq_txt{color: #000 !important;}
+    .mq_txt:hover{color: #c40f39 !important;text-decoration: none !important;}
+  </style>
+  <div id="accordion" role="tablist" style="width:900px;margin: 0 auto;">
+  <div class="card">
+    <div class="card-header" role="tab" id="headingOne">
+      <h5 class="mb-0">
+        <a class="collapsed mq_txt" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+         <img src="<?echo G5_THEME_IMG_URL ?>/faq_q.png" alt="질문아이콘">아이디어를 제공하고 싶어요. 어떻게 하나요?
+        </a>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+      <div class="card-body">
+        모나미는 다양한 아이디어와 의견을 기다리고 있습니다. 아이디어 및 의견 제공은 아래의 이메일로 문의 주시기 바랍니다.
+        E-MAIL : help2@monami.com
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <h5 class="mb-0">
+        <a class="collapsed mq_txt" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <img src="<?echo G5_THEME_IMG_URL ?>/faq_q.png" alt="질문아이콘">볼펜이 추운겨울이 되면 잘 나오지 않는 이유는?
+        </a>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="card-body">
+        일반적으로 액체는 온도에 따라 점성 즉 흐름성의 변화가 다른데, 온도가 높으면 흐름성(분자운동)이 크고 온도가 낮으면 흐름성(분자운동)이 적어집니다. 
+        볼펜잉크도 마찬가지로 온도변화에 따라 흐름성의 차이가 있어 날씨가 추운 겨울철에는 잘 나오지 않습니다.
+        그러나 실내온도에 잠시 놔둔 후 사용하면 잘 써집니다.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <h5 class="mb-0">
+        <a class="collapsed mq_txt" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <img src="<?echo G5_THEME_IMG_URL ?>/faq_q.png" alt="질문아이콘">사인펜이나 프러스펜의 색이 흐려졌을때 물을 넣어도 되나요?
+        </a>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="card-body">
+        사인펜이나 프러스펜은 수성잉크를 사용합니다. 
+        때문에 물을 넣으면 잉크가 섞여 다시 필기를 할 수 있습니다. 
+        그러나 이는 일시적인 방법으로, 물을 섞게 되면 펜촉이 빨리 마르거나 온도변화에 따라 필기 기능이 저하될 수 있어 오랫동안 사용하기 위한 방법으로 권장되지는 않습니다.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingFour">
+      <h5 class="mb-0">
+        <a class="collapsed mq_txt" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          <img src="<?echo G5_THEME_IMG_URL ?>/faq_q.png" alt="질문아이콘">크레파스의 뭉치는 현상은 왜 일어나나요?
+        </a>
+      </h5>
+    </div>
+    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="card-body">
+        크레파스는 왁스(Wax), 색소를 혼합해 만드는데 문의하신 찌꺼기(뭉침현상)는 왁스성분 때문에 발생하게 됩니다.
+        파스는 제조과정에서 단단하게 만들 수도 있고 부드럽게도 만들 수도 있습니다. 
+        파스의 연질을 단단하게 만들면 찌꺼기는 훨씬 적게 생기지만 색상이 흐리고 딱딱한 반면 파스를 연하게 만들면 찌꺼기는 많이 생기지만 색상이 짙어 어린이들이 
+        색감각을 키우기가 좋고 부드럽게 칠해져 아이들이 손쉽게 색칠을 할 수 있다는 장점이 있습니다.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+      <div class="card-header" role="tab" id="headingFive">
+        <h5 class="mb-0">
+          <a class="collapsed mq_txt" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <img src="<?echo G5_THEME_IMG_URL ?>/faq_q.png" alt="질문아이콘"> 아이가 장난을 치다가 잉크를 먹었습니다. 응급조치 방법은?
+          </a>
+        </h5>
+      </div>
+      <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+        <div class="card-body">
+          필기구 잉크는 원칙적으로 저자극성, 무독성 원료를 사용합니다.
+          필기구 잉크는 원칙적으로 저자극성, 무독성 원료를 사용합니다.
+          참고로 문구제품은 사람들이 지니고 다니거나, 가까이 두고 사용하는 물건이기 때문에 잉크의 원료 하나하나가 안정성을 고려해 만들어져 있습니다.
+          그러므로 아이가 잉크를 먹었다해도 치명적인 문제는 발생하지 않으며, 당황하지 말고 입속과 주위를 깨끗하게 닦아주시면 됩니다. 
+          단지, 아이를 잘 관찰하다가 이상이 있다고 생각되면 의사와 상담하는 것이 바람직합니다.
+        </div>
+      </div>
+  </div>
+</div>
